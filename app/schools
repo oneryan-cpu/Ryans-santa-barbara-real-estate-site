@@ -1,1 +1,13 @@
 
+export default function Schools() {
+  return (
+    <section>
+      <h1>Local Schools</h1>
+      <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))', gap:16, marginTop:16}}>
+        <div className="card"><img src="/school1.jpg" alt="school" style={{width:'100%', height:140, objectFit:'cover'}}/><div style={{padding:12}}><h4>SB Unified</h4></div></div>
+        <div className="card"><img src="/school2.jpg" alt="school" style={{width:'100%', height:140, objectFit:'cover'}}/><div style={{padding:12}}><h4>Montecito Union</h4></div></div>
+        <div className="card"><img src="/school3.jpg" alt="school" style={{width:'100%', height:140, objectFit:'cover'}}/><div style={{padding:12}}><h4>Laguna Blanca</h4></div></div>
+      </div>
+    </section>
+  )
+}
