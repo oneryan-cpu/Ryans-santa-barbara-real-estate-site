@@ -1,1 +1,19 @@
 
+'use client';
+export default function PropertyDetail({ params }) {
+  const { id } = params;
+  return (
+    <section>
+      <h1>Property {id}</h1>
+      <div style={{display:'grid', gridTemplateColumns:'1fr', gap:12}}>
+        <img src="/placeholder1.jpg" alt="p" style={{width:'100%', height:320, objectFit:'cover'}}/>
+        <div>
+          <h2>$1,750,000</h2>
+          <p>4 bd • 3 ba • 2,800 sqft</p>
+          <p style={{marginTop:8}}>MLS #: 123456</p>
+          <p style={{marginTop:8}}>Beautiful home in Santa Barbara County.</p>
+        </div>
+      </div>
+    </section>
+  )
+}
