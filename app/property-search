@@ -1,1 +1,28 @@
 
+import Link from 'next/link';
+const mock = [
+  {id:'001', price:1500000, beds:4, baths:3, sqft:2500, img:'/placeholder1.jpg', address:'123 Main St'},
+  {id:'002', price:2000000, beds:5, baths:4, sqft:3200, img:'/placeholder2.jpg', address:'456 Oak Ave'},
+  {id:'003', price:1750000, beds:4, baths:3, sqft:2800, img:'/placeholder3.jpg', address:'789 Pine Ln'}
+];
+export default function PropertySearch() {
+  return (
+    <section>
+      <h1>Property Search</h1>
+      <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))', gap:16, marginTop:16}}>
+        {mock.map(p => (
+          <Link key={p.id} href={`/property/${p.id}`}>
+            <a className="card" style={{display:'block', overflow:'hidden'}}>
+              <img src={p.img} alt={p.address} style={{width:'100%', height:180, objectFit:'cover'}}/>
+              <div style={{padding:12}}>
+                <h3>${p.price.toLocaleString()}</h3>
+                <p>{p.beds} bd • {p.baths} ba • {p.sqft} sqft</p>
+                <p style={{marginTop:8}}>{p.address}</p>
+              </div>
+            </a>
+          </Link>
+        ))}
+      </div>
+    </section>
+  )
+}
