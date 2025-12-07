@@ -1,35 +1,23 @@
-"use client";
+import ContactForm from './components/ContactForm';
+import NeighborhoodCard from './components/NeighborhoodCard';
+import SchoolCard from './components/SchoolCard';
 
-import { useState, useEffect } from "react";
-import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
-import FeaturedProperties from './components/FeaturedProperties';
+// Inside return:
+<main>
+  <HeroSection currentImage={heroImages[currentIndex]} />
+  <FeaturedProperties />
+  
+  <section>
+    <h2>Neighborhoods</h2>
+    <NeighborhoodCard name="Montecito" />
+    <NeighborhoodCard name="Carpinteria" />
+  </section>
 
-export default function Page() {
-  // Hero images in /public
-  const heroImages = [
-    "/hero1.jpg",
-    "/hero2.jpg",
-    "/hero3.jpg"
-  ];
+  <section>
+    <h2>Schools</h2>
+    <SchoolCard name="School 1" image="/school1.jpg" />
+    <SchoolCard name="School 2" image="/school2.jpg" />
+  </section>
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((i) => (i + 1) % heroImages.length);
-    }, 4000); // Change image every 4 seconds
-
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <>
-      <Navbar />
-      <main>
-        <HeroSection currentImage={heroImages[currentIndex]} />
-        <FeaturedProperties />
-      </main>
-    </>
-  );
-}
+  <ContactForm />
+</main>
