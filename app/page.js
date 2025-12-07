@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import FeaturedProperties from './components/FeaturedProperties';
 
 export default function Page() {
-  // List of hero images in /public
+  // Hero images in /public
   const heroImages = [
     "/hero1.jpg",
     "/hero2.jpg",
@@ -23,9 +24,12 @@ export default function Page() {
   }, []);
 
   return (
-    <main>
-      <HeroSection currentImage={heroImages[currentIndex]} />
-      <FeaturedProperties />
-    </main>
+    <>
+      <Navbar />
+      <main>
+        <HeroSection currentImage={heroImages[currentIndex]} />
+        <FeaturedProperties />
+      </main>
+    </>
   );
 }
