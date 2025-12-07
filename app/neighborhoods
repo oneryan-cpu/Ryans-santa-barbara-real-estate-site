@@ -3,77 +3,55 @@ import React from 'react';
 
 const neighborhoods = [
   {
-    name: "Riviera",
-    image: "https://villagesite.com/communities/riviera/image.jpg",
-    description: "The Riviera crowns Santa Barbara’s hillsides — a storied neighborhood of winding streets and sweeping vistas. From nearly every home, panoramic views unfold: downtown, the harbor, the Pacific, and distant Channel Islands. A rare blend of heritage and horizon."
+    name: 'The Riviera',
+    image: '/neighborhood1.jpg',
+    url: 'https://villagesite.com/communities/riviera',
+    description: 'Elevated homes with stunning ocean views and quiet streets that feel secluded yet close to downtown.'
   },
   {
-    name: "Montecito",
-    image: "https://villagesite.com/communities/montecito/image.jpg",
-    description: "Nestled between ocean and mountain, Montecito offers an unmatched blend of tranquility and natural grace. Quiet oak‑lined lanes, sweeping coastal views, and a storied history of fine architecture define this coastal enclave. Ideal for those who value privacy, character, and enduring beauty."
+    name: 'The Mesa',
+    image: '/neighborhood2.jpg',
+    url: 'https://villagesite.com/communities/mesa',
+    description: 'Coastal community offering relaxed beachside living with easy access to city amenities.'
   },
   {
-    name: "The Mesa",
-    image: "https://villagesite.com/communities/mesa/image.jpg",
-    description: "Stretching from Santa Barbara City College to Arroyo Burro Beach, The Mesa balances coastal accessibility with relaxed, residential comfort. Island views, ocean breezes, and proximity to local amenities create a lifestyle grounded in ease and charm."
+    name: 'Samarkand',
+    image: '/placeholder1.jpg',
+    url: 'https://villagesite.com/communities/samarkand',
+    description: 'Family-friendly neighborhood with charming historic homes and mature landscaping.'
   },
   {
-    name: "Samarkand",
-    image: "https://villagesite.com/communities/samarkand/image.jpg",
-    description: "Tucked neatly across State Street, Samarkand blends quiet residential ambiance with the convenience of city-center living. Its modest hills, tree-lined blocks, and proximity to cultural amenities make it appealing for those seeking balance — calm surroundings with city energy nearby."
+    name: 'San Roque',
+    image: '/placeholder2.jpg',
+    url: 'https://villagesite.com/communities/san-roque',
+    description: 'Traditional Santa Barbara homes with lush gardens and a strong sense of community.'
   },
   {
-    name: "San Roque",
-    image: "https://villagesite.com/communities/san-roque/image.jpg",
-    description: "San Roque is a welcoming neighborhood just north of the Mission area — where convenience meets community. Gentle streets, family-friendly atmosphere, and easy access to local shops and schools attract those who want a refined urban feel without the bustle."
+    name: 'Hope Ranch',
+    image: '/placeholder3.jpg',
+    url: 'https://villagesite.com/communities/hope-ranch',
+    description: 'Gated estates with equestrian facilities and sweeping canyon and ocean views.'
   },
   {
-    name: "Upper East",
-    image: "https://villagesite.com/communities/upper-east/image.jpg",
-    description: "Close to downtown’s conveniences yet removed enough to offer peaceful seclusion, Upper East offers the best of both worlds. Residents enjoy accessibility to shopping and dining while retaining a sense of retreat — a refined, understated neighborhood."
+    name: 'Montecito',
+    image: '/neighborhood1.jpg',
+    url: 'https://villagesite.com/communities/montecito',
+    description: 'Exclusive enclave of luxury estates, renowned for privacy, elegance, and scenic beauty.'
   },
   {
-    name: "Hope Ranch",
-    image: "https://villagesite.com/communities/hope-ranch/image.jpg",
-    description: "Rolling coastal hills meet timeless estates in Hope Ranch — a community defined by privacy, open space, and tranquil surroundings. Quiet lanes, ocean-adjacent landscapes, and understated character make it a serene setting."
+    name: 'Carpinteria',
+    image: '/neighborhood2.jpg',
+    url: 'https://villagesite.com/communities/carpinteria',
+    description: 'Charming coastal town with relaxed lifestyle, excellent beaches, and family-friendly streets.'
   },
   {
-    name: "Carpinteria",
-    image: "https://villagesite.com/communities/carpinteria/image.jpg",
-    description: "Just south of Santa Barbara, Carpinteria brings small-town charm to coastal living. Friendly streets, easy access to beaches, and a laid-back pace make it ideal for those who cherish a coastal lifestyle rooted in community and simplicity."
+    name: 'Mission Canyon',
+    image: '/placeholder1.jpg',
+    url: 'https://villagesite.com/communities/mission-canyon',
+    description: 'Hillside homes surrounded by oak woodlands, offering tranquility and panoramic views.'
   },
   {
-    name: "Mission Canyon",
-    image: "https://villagesite.com/communities/mission-canyon/image.jpg",
-    description: "Mission Canyon offers hillside living with a blend of nature and accessibility. Lush greenery, canyon trails, and close proximity to downtown provide a private yet connected neighborhood experience."
-  },
-  {
-    name: "Westside",
-    image: "https://villagesite.com/communities/westside/image.jpg",
-    description: "Santa Barbara’s Westside mixes urban convenience with coastal charm. Streets lined with historic homes, local shops, and proximity to the beach create a vibrant, welcoming neighborhood."
-  },
-  {
-    name: "Goleta",
-    image: "https://villagesite.com/communities/goleta/image.jpg",
-    description: "Just west of Santa Barbara, Goleta balances suburban ease with coastal scenery. Open spaces, local parks, and ocean views make it a versatile and inviting community for families and professionals alike."
-  }
-];
-
-export default function Neighborhoods() {
-  return (
-    <section style={{ maxWidth: 1100, margin: '0 auto', padding: '2rem' }}>
-      <h2>Neighborhoods</h2>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
-        {neighborhoods.map((n) => (
-          <div key={n.name} style={{ flex: '1 0 30%', border: '1px solid #eee', borderRadius: 8, overflow: 'hidden' }}>
-            <img src={n.image} alt={n.name} style={{ width: '100%', height: '150px', objectFit: 'cover' }} />
-            <div style={{ padding: '0.5rem' }}>
-              <h3>{n.name}</h3>
-              <p style={{ fontSize: '0.9rem', lineHeight: '1.3rem' }}>{n.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
+    name: 'Westside',
+    image: '/placeholder2.jpg',
+    url: 'https://villagesite.com/communities/westside',
+    description: 'Central neighborhood close to shops, dining, and cultural landmarks with a vi
