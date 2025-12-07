@@ -1,12 +1,12 @@
-export const metadata = {
-  title: 'Santa Barbara Real Estate',
-  description: 'Your Santa Barbara real estate resource.',
-};
+import HeroSection from '../components/HeroSection';
+import FeaturedProperties from '../components/FeaturedProperties';
 
-export default function RootLayout({ children }) {
+export default function Page() {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+    <main>
+      <HeroSection />
+      <FeaturedProperties />
+    </main>
   );
 }
+
