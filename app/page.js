@@ -20,43 +20,62 @@ export default function Page() {
   return (
     <main style={{ fontFamily: 'sans-serif', lineHeight: '1.6', color: '#1a1a1a' }}>
       
+      {/* Hero Section with fade */}
       <section style={{
-        padding: '6rem 2rem',
-        backgroundImage: `url(${heroImages[currentImage]})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        color: '#fff',
-        textAlign: 'center',
+        position: 'relative',
+        height: '70vh',
+        overflow: 'hidden',
         display: 'flex',
-        flexDirection: 'column',
+        alignItems: 'center',
         justifyContent: 'center',
-        minHeight: '70vh',
-        transition: 'background-image 1s ease-in-out'
       }}>
-        <h1 style={{ fontSize: '3rem', marginBottom: '1rem', textShadow: '2px 2px 5px rgba(0,0,0,0.7)' }}>
-          Ryan Kell - Santa Barbara Real Estate
-        </h1>
-        <p style={{
-          fontSize: '1.3rem',
-          maxWidth: '700px',
-          margin: '0 auto 2rem',
-          textShadow: '1px 1px 3px rgba(0,0,0,0.7)'
+        {heroImages.map((image, index) => (
+          <div
+            key={index}
+            style={{
+              backgroundImage: `url(${image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              opacity: currentImage === index ? 1 : 0,
+              transition: 'opacity 1.5s ease-in-out',
+            }}
+          />
+        ))}
+
+        {/* Overlay text */}
+        <div style={{
+          position: 'relative',
+          zIndex: 10,
+          textAlign: 'center',
+          color: '#fff',
+          textShadow: '2px 2px 8px rgba(0,0,0,0.8)',
+          padding: '0 2rem'
         }}>
-          Helping you find your dream home in Santa Barbara, Carpinteria, Montecito, and Goleta.
-        </p>
-        <a 
-          href="#listings" 
-          style={{
-            padding: '1rem 2rem',
-            backgroundColor: '#0070f3',
-            color: '#fff',
-            borderRadius: '5px',
-            textDecoration: 'none',
-            fontWeight: 'bold'
-          }}
-        >
-          View Listings
-        </a>
+          <h1 style={{ fontSize: '3rem', marginBottom: '1rem' }}>
+            Ryan Kell - Santa Barbara Real Estate
+          </h1>
+          <p style={{ fontSize: '1.3rem', maxWidth: '700px', margin: '0 auto 2rem' }}>
+            Helping you find your dream home in Santa Barbara, Carpinteria, Montecito, and Goleta.
+          </p>
+          <a 
+            href="#listings"
+            style={{
+              padding: '1rem 2rem',
+              backgroundColor: '#0070f3',
+              color: '#fff',
+              borderRadius: '5px',
+              textDecoration: 'none',
+              fontWeight: 'bold'
+            }}
+          >
+            View Listings
+          </a>
+        </div>
       </section>
     </main>
   );
