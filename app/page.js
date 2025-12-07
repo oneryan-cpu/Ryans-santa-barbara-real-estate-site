@@ -16,11 +16,7 @@ export default function Page() {
 
       <section>
         <h2>Featured Properties</h2>
-        <ul>
-          <li>Property 1</li>
-          <li>Property 2</li>
-          <li>Property 3</li>
-        </ul>
+        <p>Property 1, Property 2, Property 3</p>
       </section>
 
       <section>
