@@ -3,24 +3,23 @@ import React from 'react';
 
 const schools = [
   {
-    name: "Montecito Union School",
-    image: "/school1.jpg", // placeholder image, later swap with actual school photo if desired
-    url: "https://www.montecitounionschool.org/",
-    description: "A highly regarded public elementary school serving Montecito and surrounding neighborhoods, known for its strong academic programs and community involvement."
+    name: 'Santa Barbara High School',
+    image: '/school1.jpg',
+    url: 'https://www.sbhs.net/',
+    description: 'Comprehensive public high school offering academics, athletics, and arts programs.'
   },
   {
-    name: "Santa Barbara High School",
-    image: "/school2.jpg",
-    url: "https://www.sbhs.sbunified.org/",
-    description: "A historic high school offering diverse academic and extracurricular opportunities, with a focus on college preparation and community engagement."
+    name: 'Dos Pueblos High School',
+    image: '/school2.jpg',
+    url: 'https://dphs.sbunified.org/',
+    description: 'Public high school in Goleta with strong programs in STEM and performing arts.'
   },
   {
-    name: "Carpinteria Middle School",
-    image: "/school3.jpg",
-    url: "https://www.carpinteriamiddle.org/",
-    description: "Serving the Carpinteria community, this school emphasizes student growth, arts, and athletics, fostering a supportive and inclusive environment."
+    name: 'Carpinteria High School',
+    image: '/school3.jpg',
+    url: 'https://chs.sbunified.org/',
+    description: 'Local high school serving Carpinteria, known for its community-focused approach.'
   }
-  // Add more schools in the same format as needed
 ];
 
 export default function Schools() {
