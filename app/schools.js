@@ -1,4 +1,6 @@
 'use client';
+import SchoolCard from '../components/SchoolCard';
+
 import React from 'react';
 
 const schools = [
