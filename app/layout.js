@@ -1,14 +1,12 @@
 export const metadata = {
-  title: "Ryan’s Santa Barbara Real Estate",
-  description: "Real estate site built with Next.js",
+  title: 'Santa Barbara Real Estate',
+  description: 'Your Santa Barbara real estate resource.',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body style={{ margin: 0, fontFamily: "Arial" }}>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
