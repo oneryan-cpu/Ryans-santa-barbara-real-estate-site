@@ -4,23 +4,23 @@ import React from 'react';
 const schools = [
   {
     name: "Montecito Union School",
-    image: "https://villagesite.com/school-images/montecito-union.jpg", // replace with actual school image URL
+    image: "/school1.jpg", // placeholder image, later swap with actual school photo if desired
     url: "https://www.montecitounionschool.org/",
     description: "A highly regarded public elementary school serving Montecito and surrounding neighborhoods, known for its strong academic programs and community involvement."
   },
   {
     name: "Santa Barbara High School",
-    image: "https://villagesite.com/school-images/sb-high.jpg", // replace with actual school image URL
+    image: "/school2.jpg",
     url: "https://www.sbhs.sbunified.org/",
     description: "A historic high school offering diverse academic and extracurricular opportunities, with a focus on college preparation and community engagement."
   },
   {
     name: "Carpinteria Middle School",
-    image: "https://villagesite.com/school-images/carpinteria-ms.jpg", // replace with actual school image URL
-    url: "https://www.carpintariamiddle.org/",
+    image: "/school3.jpg",
+    url: "https://www.carpinteriamiddle.org/",
     description: "Serving the Carpinteria community, this school emphasizes student growth, arts, and athletics, fostering a supportive and inclusive environment."
   }
-  // Add more schools in the same format
+  // Add more schools in the same format as needed
 ];
 
 export default function Schools() {
