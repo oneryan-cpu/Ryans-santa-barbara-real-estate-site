@@ -1,4 +1,6 @@
 'use client';
+import NeighborhoodCard from '../components/NeighborhoodCard';
+
 import React from 'react';
 
 const neighborhoods = [
