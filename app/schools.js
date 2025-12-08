@@ -1,32 +1,37 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import SchoolCard from "../components/SchoolCard";
 
-export default function SchoolCard({ name, image, url, category, description }) {
+export default function Schools({ schools }) {
+  const [filter, setFilter] = useState("All");
+
+  const filters = ["All", "Public", "Private", "Elementary", "Middle", "High", "College"];
+
+  const filtered = schools.filter((school) => {
+    if (filter === "All") return true;
+    return school.category.includes(filter);
+  });
+
   return (
-    <motion.a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      whileHover={{ scale: 1.03 }}
-      transition={{ type: "spring", stiffness: 200 }}
-      className="block rounded-xl overflow-hidden shadow-md border border-gray-200 bg-white"
-    >
-      <div className="h-48 w-full overflow-hidden">
-        <img
-          src={image}
-          alt={name}
-          className="w-full h-full object-cover"
-        />
+    <section style={{ maxWidth: 1200, margin: "0 auto", padding: "3rem 1rem" }}>
+      <h2 className="text-4xl font-bold mb-6 text-center">Schools</h2>
+
+      {/* FILTER BUTTONS */}
+      <div className="flex flex-wrap gap-3 justify-center mb-8">
+        {filters.map((f) => (
+          <button
+            key={f}
+            onClick={()} />
+          </div>
+        ))}
       </div>
 
-      <div className="p-4">
-        <h3 className="text-xl font-semibold mb-1">{name}</h3>
-        <p className="text-sm text-gray-700 mb-2">{description}</p>
-        <span className="text-xs py-1 px-2 bg-gray-100 rounded-full text-gray-600">
-          {category}
-        </span>
+      {/* GRID */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filtered.map((school) => (
+          <SchoolCard key={school.name} {...school} />
+        ))}
       </div>
-    </motion.a>
+    </section>
   );
 }
