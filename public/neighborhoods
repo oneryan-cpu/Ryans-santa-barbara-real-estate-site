@@ -1,0 +1,17 @@
+your-project/
+ └── public/
+      └── neighborhoods/
+           riviera.jpg
+           montecito.jpg
+           sammercove.jpg
+           carpinteria.jpg
+           montecito-lower.jpg
+           hope-ranch.jpg
+           mesa.jpg
+           downtown.jpg
+           goleta.jpg
+           mission-canyon.jpg
+           san-roque.jpg
+           santa-ynez.jpg
+           summerland.jpg
+           …(whatever neighborhoods you include)
