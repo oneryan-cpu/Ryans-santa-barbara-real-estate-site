@@ -1,17 +1,17 @@
 'use client';
 
 import React from 'react';
-import Navbar from '../components/Navbar';
-import HeroSection from '../components/HeroSection';
-import FeaturedProperties from '../components/FeaturedProperties';
-import NeighborhoodsPage from './neighborhoods/page';
-import SchoolsPage from './schools/page';
+import Navbar from './components/Navbar';
+import HeroSection from './components/HeroSection';
+import FeaturedProperties from './components/FeaturedProperties';
+import Neighborhoods from './neighborhoods';
+import Schools from './schools';
 
 export default function Page() {
   return (
     <>
       <Navbar />
-      
+
       <HeroSection 
         images={[
           '/placeholder1.jpg',
@@ -32,12 +32,12 @@ export default function Page() {
 
       <section className="py-12 px-6">
         <h2 className="text-2xl font-bold mb-6">Neighborhoods</h2>
-        <NeighborhoodsPage />
+        <Neighborhoods />
       </section>
 
       <section className="py-12 px-6">
         <h2 className="text-2xl font-bold mb-6">Schools</h2>
-        <SchoolsPage />
+        <Schools />
       </section>
 
       <section style={{ maxWidth: 1100, margin: '0 auto', padding: '2rem' }}>
